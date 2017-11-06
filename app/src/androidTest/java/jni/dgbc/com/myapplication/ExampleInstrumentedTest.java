@@ -25,6 +25,8 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("jni.dgbc.com.myapplication", appContext.getPackageName());
-        Tool.ReadINi(appContext.getAssets());
+       // Tool.ReadINi(appContext.getAssets());
+        Tool.arrayopt();
+
     }
 }

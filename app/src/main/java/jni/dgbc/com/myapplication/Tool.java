@@ -1,6 +1,7 @@
 package jni.dgbc.com.myapplication;
 
 import android.content.res.AssetManager;
+import android.util.Log;
 
 import jni.dgbc.com.myapplication.jni.JNI;
 
@@ -28,6 +29,27 @@ public class Tool {
     public static void ReadINi(AssetManager assetManager) {
        // JNI.ReadINI(assetManager);
         JNI.ReadIni();
+    }
+
+    public static void arrayopt() {
+        double[] _In = new double[]{
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int _inNum = _In.length;
+
+        double[] _out = new double[_inNum];
+        int[] _OutNum = new int[1];
+
+        JNI.ArrayOpt(_inNum, _In, _OutNum, _out);
+
+        if (_OutNum[0] > 0) {
+            for (int i = 0; i < _OutNum[0]; i++) {
+                Log.e("hello", "" + _out[i]);
+            }
+        }
+
+
+
+
     }
 
 
