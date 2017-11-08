@@ -1,9 +1,9 @@
-package jni.dgbc.com.myapplication;
+package com.lytsfeng;
 
 import android.content.res.AssetManager;
 import android.util.Log;
 
-import jni.dgbc.com.myapplication.jni.JNI;
+import com.lytsfeng.jni.JNI;
 
 /**
  * Created by zhangyafeng on 2017/11/3.

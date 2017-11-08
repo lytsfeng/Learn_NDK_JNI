@@ -27,7 +27,7 @@ extern "C"
 JNIEXPORT jstring
 
 JNICALL
-Java_jni_dgbc_com_myapplication_MainActivity_stringFromJNI(
+Java_com_lytsfeng_MainActivity_stringFromJNI(
         JNIEnv *env,
         jobject /* this */) {
     std::string hello = "Hello from C++";
@@ -37,7 +37,7 @@ Java_jni_dgbc_com_myapplication_MainActivity_stringFromJNI(
 }
 extern "C"
 JNIEXPORT void JNICALL
-Java_jni_dgbc_com_myapplication_jni_JNI_CopyArray(JNIEnv *env, jclass type, jdoubleArray pIn_,
+Java_com_lytsfeng_jni_JNI_CopyArray(JNIEnv *env, jclass type, jdoubleArray pIn_,
                                                   jdoubleArray pOut_) {
 
 
@@ -74,7 +74,7 @@ Java_jni_dgbc_com_myapplication_jni_JNI_CopyArray(JNIEnv *env, jclass type, jdou
 }
 extern "C"
 JNIEXPORT void JNICALL
-Java_jni_dgbc_com_myapplication_jni_JNI_ReadIni(JNIEnv *env, jclass type) {
+Java_com_lytsfeng_jni_JNI_ReadIni(JNIEnv *env, jclass type) {
 
     IniFile _IniFile;
     string _FileName = "/storage/sdcard/ServiceConfig.ini";
@@ -91,7 +91,7 @@ Java_jni_dgbc_com_myapplication_jni_JNI_ReadIni(JNIEnv *env, jclass type) {
     }
 }extern "C"
 JNIEXPORT void JNICALL
-Java_jni_dgbc_com_myapplication_jni_JNI_ReadAssetFile(JNIEnv *env, jclass type,
+Java_com_lytsfeng_JNI_ReadAssetFile(JNIEnv *env, jclass type,
                                                       jobject pAsset) {
 
     AAssetManager *_AssetManger = AAssetManager_fromJava(env, pAsset);
@@ -137,7 +137,7 @@ void opt (unsigned int pNum, double *pInDate, int *pOutNum, double *pOutDate){
 
 extern "C"
 JNIEXPORT jint JNICALL
-Java_jni_dgbc_com_myapplication_jni_JNI_ArrayOpt(JNIEnv *env, jclass type, jint pNum,
+Java_com_lytsfeng_jni_JNI_ArrayOpt(JNIEnv *env, jclass type, jint pNum,
                                                  jdoubleArray pInDate_, jintArray pOutName_,
                                                  jdoubleArray pOutDate_) {
     jdouble *pInDate = env->GetDoubleArrayElements(pInDate_, NULL);

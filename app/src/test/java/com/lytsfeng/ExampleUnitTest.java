@@ -1,8 +1,8 @@
-package jni.dgbc.com.myapplication;
+package com.lytsfeng;
+
+import com.lytsfeng.Tool;
 
 import org.junit.Test;
-
-import jni.dgbc.com.myapplication.jni.JNI;
 
 import static org.junit.Assert.*;
 

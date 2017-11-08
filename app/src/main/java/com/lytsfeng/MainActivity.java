@@ -1,8 +1,13 @@
-package jni.dgbc.com.myapplication;
+package com.lytsfeng;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.lytsfeng.ipc.Book;
+import com.lytsfeng.ipc.IBookManager;
+
+import jni.dgbc.com.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
         tv.setText(stringFromJNI());
+
+       // IBookManager
     }
 
     /**
@@ -26,4 +33,8 @@ public class MainActivity extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
+
+
+
+
 }

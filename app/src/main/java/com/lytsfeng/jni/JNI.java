@@ -1,4 +1,4 @@
-package jni.dgbc.com.myapplication.jni;
+package com.lytsfeng.jni;
 
 import android.content.res.AssetManager;
 
